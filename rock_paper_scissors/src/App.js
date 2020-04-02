@@ -13,6 +13,20 @@ function App() {
 
     if (playerPick === randomPick) {
       setDraws(draws + 1)
+    } else if (playerPick === 'Rock' && randomPick === 'Paper') {
+      setLosses(losses + 1)
+    } else if (playerPick === 'Rock' && randomPick === 'Scissors') {
+      setWins(wins + 1)
+    } else if (playerPick === 'Paper' && randomPick === 'Rock') {
+      setWins(wins + 1)
+    } else if (playerPick === 'Paper' && randomPick === 'Scissors') {
+      setLosses(losses + 1)
+    } else if (playerPick === 'Scissors' && randomPick === 'Rock') {
+      setLosses(losses + 1)
+    } else if (playerPick === 'Scissors' && randomPick === 'Paper') {
+      setWins(wins + 1)
+    } else {
+      alert('Wait, what now?');
     }
 
   }
@@ -29,7 +43,7 @@ function App() {
 
   return (
     <div className="main">
-      <p>So far you have {wins} WINS, {losses} LOSSES, and {draws} DRAWS out of {games}</p>
+      <p>So far you have {wins} WINS, {losses} LOSSES, and {draws} DRAWS out of {games} games</p>
       <p>You picked {playerChoice} and the computer picked {computerChoice} </p>
       <button name="Rock" value="Rock" onClick={letsPlay}>Rock</button>
       <button name="Paper" value="Paper" onClick={letsPlay}>Paper</button>
