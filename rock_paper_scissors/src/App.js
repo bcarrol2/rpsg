@@ -6,8 +6,15 @@ import './App.css';
 function App() {
   
   const letsPlay = (event) => {
-    setPlayerChoice(event.target.value)
+    let playerPick = event.target.value
+    setPlayerChoice(playerPick)
     setComputerChoice(randomPick)
+    setGames(games + 1)
+
+    if (playerPick === randomPick) {
+      setDraws(draws + 1)
+    }
+
   }
 
   const [wins, setWins] = useState(0);
