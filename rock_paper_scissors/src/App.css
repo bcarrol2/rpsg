@@ -1,5 +1,47 @@
 body {
-    background-image: url(./img/rock-paper-scissors-items.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url(./img/rock-paper-scissors-items.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  font-family: Digital tech;
+}
+
+.overlay {
+  background-color: rgba(0,0,0,0.7);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -5;
+  padding-top: 50px;
+  font-size: 20px;
+}
+
+button {
+  height: 40px;
+  width: 170px;
+  margin: 10px;
+  font-size: 15px;
+  font-family: Digital tech;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+  border: 5px solid #FFFFFF;
+}
+
+button:hover {
+  color: black;
+  background-color: white;
+  cursor: -webkit-grab;
+}
+
+button:focus {
+  outline: 0;
+}
+
+button:active {
+  height: 30px;
+  width: 140px;
+  cursor: -webkit-grabbing;
 }

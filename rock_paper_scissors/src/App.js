@@ -46,7 +46,7 @@ function App() {
   const [disable, setDisable] = useState(false);
 
   return (
-    <div className="main">
+    <div className="overlay">
       <p>So far you have {wins} WINS, {losses} LOSSES, and {draws} DRAWS out of {games} games</p>
       <p>You picked {playerChoice} and the computer picked {computerChoice} </p>
       <button disabled={disable} value="Rock" onClick={letsPlay}>Rock</button>
