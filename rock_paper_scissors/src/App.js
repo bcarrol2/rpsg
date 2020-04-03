@@ -6,6 +6,8 @@ import './App.css';
 function App() {
   
   const letsPlay = (event) => {
+    setDisable(true)
+    setTimeout(() => { setDisable(false) }, 1000);
     let playerPick = event.target.value
     setPlayerChoice(playerPick)
     setComputerChoice(randomPick)
@@ -28,26 +30,28 @@ function App() {
     } else {
       alert('Wait, what now?');
     }
-
+    
   }
 
   const [wins, setWins] = useState(0);
   const [losses, setLosses] = useState(0);
   const [draws, setDraws] = useState(0);
   const [games, setGames] = useState(0);
-  const computerOptions = ['Rock', 'Paper', 'Scissors']
-  let randomPick = _.sample(computerOptions)
+  const computerOptions = ['Rock', 'Paper', 'Scissors'];
+  let randomPick = _.sample(computerOptions);
 
   const [playerChoice, setPlayerChoice] = useState('');
   const [computerChoice, setComputerChoice] = useState('');
+
+  const [disable, setDisable] = useState(false);
 
   return (
     <div className="main">
       <p>So far you have {wins} WINS, {losses} LOSSES, and {draws} DRAWS out of {games} games</p>
       <p>You picked {playerChoice} and the computer picked {computerChoice} </p>
-      <button name="Rock" value="Rock" onClick={letsPlay}>Rock</button>
-      <button name="Paper" value="Paper" onClick={letsPlay}>Paper</button>
-      <button name="Scissors" value="Scissors" onClick={letsPlay}>Scissors</button>
+      <button disabled={disable} value="Rock" onClick={letsPlay}>Rock</button>
+      <button disabled={disable} value="Paper" onClick={letsPlay}>Paper</button>
+      <button disabled={disable} value="Scissors" onClick={letsPlay}>Scissors</button>
     </div>
   );
 }
