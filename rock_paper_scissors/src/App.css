@@ -36,12 +36,12 @@ button:hover {
   cursor: -webkit-grab;
 }
 
-button:focus {
-  outline: 0;
-}
-
 button:active {
   height: 30px;
   width: 140px;
   cursor: -webkit-grabbing;
+}
+
+button:focus {
+  outline: 0;
 }

@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import _ from 'lodash';
 import './App.css';
 
-
 function App() {
-  
+
   const letsPlay = (event) => {
     setDisable(true)
     setTimeout(() => { setDisable(false) }, 1000);
@@ -30,7 +29,7 @@ function App() {
     } else {
       alert('Wait, what now?');
     }
-    
+
   }
 
   const [wins, setWins] = useState(0);
