@@ -16,7 +16,7 @@ body {
   width: 100%;
   z-index: -5;
   padding-top: 50px;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 button {
@@ -44,4 +44,8 @@ button:active {
 
 button:focus {
   outline: 0;
+}
+
+#gun-button {
+  background-color: rgb(145, 18, 18);
 }
