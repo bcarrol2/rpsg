@@ -41,8 +41,8 @@ function App() {
   const computerOptions = ['Rock', 'Paper', 'Scissors'];
   let randomPick = _.sample(computerOptions);
 
-  const [playerChoice, setPlayerChoice] = useState('');
-  const [computerChoice, setComputerChoice] = useState('');
+  const [playerChoice, setPlayerChoice] = useState('Nothing');
+  const [computerChoice, setComputerChoice] = useState('Nothing');
 
   const [disable, setDisable] = useState(false);
 
