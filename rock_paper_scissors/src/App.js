@@ -50,8 +50,8 @@ function App() {
 
   return (
     <div className="overlay">
-      <p>So far you have <span style={{color: 'green'}}>{wins}</span> WINS, <span style={{color: 'red'}}>{losses}</span> LOSSES, and <span style={{color: 'black'}}>{draws}</span> DRAWS out of <span>{games}</span> games</p>
-      <p>You picked {playerChoice} and the computer picked {computerChoice} </p>
+      <p>So far you have <span style={{color: 'green', fontWeight: 'bold'}}>{wins} WINS</span>, <span style={{color: 'red', fontWeight: 'bold'}}>{losses} LOSSES</span>, and <span style={{color: 'black', fontWeight: 'bold'}}>{draws} DRAWS</span> out of <span style={{fontWeight: 'bold'}}>{games}</span> games</p>
+      <p>You picked <span style={{color: 'black', fontWeight: 'bold'}}>{playerChoice}</span> and the computer picked <span style={{color: 'black', fontWeight: 'bold'}}>{computerChoice}</span> </p>
       <button disabled={disable} value="Rock" onClick={letsPlay}>Rock</button>
       <button disabled={disable} value="Paper" onClick={letsPlay}>Paper</button>
       <button disabled={disable} value="Scissors" onClick={letsPlay}>Scissors</button>
